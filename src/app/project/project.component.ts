@@ -11,6 +11,15 @@ export class ProjectComponent implements OnInit {
   constructor() { }
   listProjects =[
     {
+      name:'Sure (Watch E-com)',
+      desc:'Sure is watch e-com platform created using Angular and bootstrap for client-side and Node.js, express.js for server-side and a JSON-based database.',
+      // imageHome:'../../assets/pathodux.PNG',
+      // imageBoard:'../../assets/basic1.png',
+      // imageEnd:'../../assets/Idea Page.svg',
+      image: '../../assets/Sure-home.svg',
+      link:'https://github.com/inshal-dev/SURE-Ecom',
+    },
+    {
       Name: 'Pathodux',
       desc:'It is a platform for new and experienced Developers. The Platform contains Learning, Idea Sharing, Exploring, and connecting to Experienced Developers. The Pathodux is a Platform for new and experienced software developers.  The Platform consists of Feature Like Learning, Idea Sharing, Explore these features are created in a unique way for the user to get help and get to know more about the Computer and IT World. The learn feature is created in a unique manner to have fun while learning(Learning through Game).',
       // imageHome:'../../assets/pathodux.PNG',
@@ -38,7 +47,7 @@ export class ProjectComponent implements OnInit {
       link:'https://breadgo-ac68d.firebaseapp.com/'
     },
   ]
-  
+
 
   ngOnInit(): void {
   }

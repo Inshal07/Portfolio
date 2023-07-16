@@ -6,11 +6,11 @@ body{
     height: 100%;
     font-family: 'Assistant', sans-serif;
     background: linear-gradient(90deg, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%);
-    background-image: url('../src/assets/Desktop.svg');
+    background-image: url('./assets/Desktop.svg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-  
+
 }
 
 *
@@ -24,4 +24,3 @@ body{
     background: linear-gradient(85deg,#085fffde,#ffffffbd);
    border-bottom: .3px solid rgb(44, 41, 255);
   }
- 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 declare var $:any;
 @Component({
@@ -7,9 +7,11 @@ declare var $:any;
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
- patho =true
+   patho:boolean =true
+   screenWidth:any;
+
   constructor() { }
-  listProjects =[
+  listProjects:Array<any> = [
     {
       name:'Sure (Watch E-com)',
       desc:'Sure is watch e-com platform created using Angular and bootstrap for client-side and Node.js, express.js for server-side and a JSON-based database.',
@@ -20,7 +22,7 @@ export class ProjectComponent implements OnInit {
       link:'https://github.com/inshal-dev/SURE-Ecom',
     },
     {
-      Name: 'Pathodux',
+      name: 'Pathodux',
       desc:'It is a platform for new and experienced Developers. The Platform contains Learning, Idea Sharing, Exploring, and connecting to Experienced Developers. The Pathodux is a Platform for new and experienced software developers.  The Platform consists of Feature Like Learning, Idea Sharing, Explore these features are created in a unique way for the user to get help and get to know more about the Computer and IT World. The learn feature is created in a unique manner to have fun while learning(Learning through Game).',
       // imageHome:'../../assets/pathodux.PNG',
       // imageBoard:'../../assets/basic1.png',
@@ -29,7 +31,7 @@ export class ProjectComponent implements OnInit {
       link:'https://pathodux.in/'
     },
     {
-      Name: 'Pandemic Dashboard',
+      name: 'Pandemic Dashboard',
       desc:'Pandemic Dashboard. The Dashboard is built for the purpose of Information Sharing related to Pandemic/ Epidemic Diseases. The dashboard consists of disease information and charts of Covid-19, Ebola, Spanish-Flu, Plague. User will also be able to share their sentiments related to diseases.',
       // imageHome:'../../assets/homeDash.PNG',
       // imageBoard:'../../assets/infoDash.PNG',
@@ -38,7 +40,7 @@ export class ProjectComponent implements OnInit {
       link:'https://dashboard-user-34fbc.firebaseapp.com/'
     },
     {
-      Name: 'BreadGo',
+      name: 'BreadGo',
       desc:'BreadGo is a Food Charity Web app. The Purpose of the app is to reduce food waste and help those who are in need. The Web-app is responsive and users can also add a home icon for the web app for easy access. ',
       // imageHome:'../../assets/home.PNG',
       // imageBoard:'../../assets/form.PNG',
@@ -50,30 +52,39 @@ export class ProjectComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.screenWidth = window.innerWidth
   }
-  openPath(){
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+  this.screenWidth= window.innerWidth;
+  }
+  openSure(){
     window.scroll(0, 600)
   }
+  openPathodux(){
+    window.scroll(0, 1300)
+  }
   openPan(){
-      window.scroll(0, 1300)
+      window.scroll(0, 2000)
   }
   openBread(){
-    window.scroll(0, 2000)
+    window.scroll(0, 2700)
     }
     youtube(){
-      window.scroll(0, 2700)
+      window.scroll(0, 3300)
       }
    dashboardNeu(){
-     window.scroll(0, 3300)
+     window.scroll(0, 4000)
   }
   onboard(){
-    window.scroll(0, 4000)
+    window.scroll(0, 4700)
  }
  gymUI(){
-  window.scroll(0, 4700)
+  window.scroll(0, 5200)
 }
 insta(){
-  window.scroll(0, 5200)
+  window.scroll(0, 6700)
 }
 dance(){
   window.scroll(0, 7200)

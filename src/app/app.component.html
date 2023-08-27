@@ -1,6 +1,12 @@
 <router-outlet></router-outlet>
-<div class="download">
-  <button type="button" class="btn download-btn" (click)="downloadPdf()">
+<div class="download" >
+  <button *ngIf="screenWidth >= 500; else icon" type="button" class="btn download-btn" (click)="downloadPdf()">
     <img src="/assets/cloud-arrow-down-solid.svg" alt="" width="30px" height="30px">
      CV/Resume</button>
+     <ng-template #icon >
+      <button  type="button" class="btn download-btn" (click)="downloadPdf()">
+        <img src="/assets/cloud-arrow-down-solid.svg" alt="" width="30px" height="30px">
+      </button>
+     </ng-template>
+
 </div>

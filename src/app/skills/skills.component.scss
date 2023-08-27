@@ -71,8 +71,8 @@
         0% { width: 0; }
     }
 
-    @media screen and (max-width:1300px) {
-        .card{
+@media screen and (max-width:1300px) {
+    .card{
             height: auto;
             width: auto;
     }
@@ -82,4 +82,19 @@
         height: auto;
     }
 
-    }
+}
+
+@media screen and (max-width: 567px){
+  .mage{
+    display: none;
+  }
+  .col-6{
+    width: 100%;
+  }
+}
+
+@media (max-width:400px){
+  .card-main{
+    margin-top: 20px !important;
+  }
+}

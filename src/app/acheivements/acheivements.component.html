@@ -1,15 +1,15 @@
 <div class="container">
-    <div class="card">
+    <div class="card main-content">
         <div class="card-body ">
             <h4 class="card-title">Achievements</h4>
             <div class="container rowed">
             <div class="row text-center">
-                <div class="col">
+                <div class="col-sm-12 col-lg-6">
                     <button class="btn btn-block select achieve" (click)="onAchieve()">
                     <img class="img-fluid achieves" src="../../assets/achieve.svg" alt="achieve" >
                     </button>
                 </div>
-                <div class="col">
+                <div class="col-sm-12 col-lg-6">
                     <button class="btn btn-block select event" (click)="onEvent()">
                         <img class="img-fluid events" src="../../assets/Events.svg" alt="achieve" >
                     </button>
@@ -31,7 +31,7 @@
     </div>
 <div class="container" id="test">
     <ng-container *ngFor="let items of listCertificate">
-        <div class="card">
+        <div class="card certificate-card">
         <div class="card-body ">
             <div class="container">
                 <div class="row">
@@ -57,7 +57,7 @@
 </div>
 <div class="container">
     <ng-container *ngFor="let items of listEvents">
-        <div class="card">
+        <div class="card certificate-card">
         <div class="card-body ">
             <div class="container">
                 <div class="row">

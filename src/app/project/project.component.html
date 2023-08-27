@@ -6,18 +6,23 @@
         <div class="container content-1">
             <div class="row ">
                 <p class="card-text">Angular Projects</p>
-                <div class="col text-center">
+                <div class="col-lg-4 col-sm-12 text-center">
 
-                      <button class="btn btn-default" (click)="openPath()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <button class="btn btn-default" (click)="openSure()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="patho" src="../../assets/Sure-home.svg" alt="" srcset="" width="250px" height="150px"><br>
+                    <p class="title-text">Sure E-com</p>
+                    <p class="small">Click to view</p>
+               </button>
+            </div>
+                <div class="col-lg-4 col-sm-12 text-center">
+
+                      <button class="btn btn-default" (click)="openPathodux()" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img class="patho" src="../../assets/pathodux-logo.svg" alt="" srcset="" width="250px" height="150px"><br>
                         <p class="title-text">PathoDux</p>
                         <p class="small">Click to view more about Pathodux</p>
                    </button>
-
-
-
                 </div>
-                <div class="col text-center">
+                <div class="col-lg-4 col-sm-12 text-center">
                   <button class="btn btn-default" (click)="openPan()">
                     <img class="patho" src="../../assets/pandemics-dashboard.svg" alt="" srcset="" width="250px" height="150px"><br>
                     <p class="title-text">Pandemics Dashboard</p>
@@ -25,7 +30,7 @@
                </button>
 
                 </div>
-                <div class="col text-center">
+                <div class="col-lg-4 col-sm-12 text-center">
                   <button class="btn btn-default" (click)="openBread()">
                     <img class="patho" src="../../assets/bread.jpg" alt="" srcset="" width="250px" height="150px"><br>
                     <p class="title-text">BreadGo</p>
@@ -34,17 +39,17 @@
                 </div>
             </div>
 
-            <div class="row mt-3">
+            <div class="row mt-3 design-section">
                 <p class="card-text">UI/UX Designs</p>
 
-                <div class="col-4 text-center">
+                <div class="col-lg-4 col-sm-12 text-center">
                   <button class="btn btn-default" (click)="youtube()" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <img class="patho" src="../../assets/youtube.PNG" alt="" srcset="" width="250px" height="150px"><br>
                     <p class="title-text">Youtube Music</p>
                     <p class="small">Click to view more about Youtube Music UI</p>
                </button>
             </div>
-            <div class="col-4 text-center">
+            <div class="col-lg-4 col-sm-12 text-center">
               <button class="btn btn-default" (click)="dashboardNeu()">
                 <img class="patho" src="../../assets/neuDash.PNG" alt="" srcset="" width="250px" height="150px"><br>
                 <p class="title-text">Neumorphic Dashboard</p>
@@ -52,28 +57,28 @@
            </button>
 
             </div>
-            <div class="col-4 text-center">
+            <div class="col-lg-4 col-sm-12 text-center">
               <button class="btn btn-default" (click)="onboard()">
                 <img class="patho" src="../../assets/proptech.svg" alt="" srcset="" width="250px" height="150px"><br>
                 <p class="title-text"> Prop-tech UI</p>
                 <p class="small">Click to view more about Instagram Profile UI/UX</p>
            </button>
             </div>
-            <div class="col-4 text-center">
+            <div class="col-lg-4 col-sm-12 text-center">
               <button class="btn btn-default" (click)="gymUI()">
                 <img class="patho" src="../../assets/gym.svg" alt="" srcset="" width="250px" height="150px"><br>
                 <p class="title-text">Gym Web-App UI/UX</p>
                 <p class="small">Click to view more about Gym Web-App UI/UX</p>
            </button>
             </div>
-            <div class="col-4 text-center">
+            <div class="col-lg-4 col-sm-12 text-center">
               <button class="btn btn-default" (click)="insta()">
                 <img class="patho" src="../../assets/insta.svg" alt="" srcset="" width="250px" height="150px"><br>
                 <p class="title-text">Instagram Profile UI/UX</p>
                 <p class="small">Click to view more about Onboarding Animation</p>
            </button>
             </div>
-            <div class="col-4 text-center">
+            <div class="col-lg-4 col-sm-12 text-center">
               <button class="btn btn-default" (click)="dance()">
                 <img class="patho" src="../../assets/Dance.PNG" alt="" srcset="" width="250px" height="150px"><br>
                 <p class="title-text">Dance Studio UI/UX</p>
@@ -93,14 +98,14 @@
 <ng-template [ngIf]="patho" *ngFor="let items of listProjects">
   <div class="card card-project mb-5" >
 
-    <div class="card-body ">
-        <h4 class="card-title">{{items.Name}}</h4>
+    <div class="card-body">
+        <h4 class="card-title">{{items.name}}</h4>
         <div class="container">
           <div class="row">
-            <div class="col" >
-              <img class="img-fluid proImage" [src]="items.image" alt="" >
+            <div class="col-sm-12 col-lg-6" >
+              <img class="img-fluid proImage rounded" [src]="items.image" alt="" >
             </div>
-            <div class="col">
+            <div class="col-sm-12 col-lg-6">
               <div class="desc text-center">
                 {{items.desc}}
               </div>
@@ -125,63 +130,82 @@
       <h4 class="card-title ">UI/UX Design</h4>
     </div>
 </div>
+<!--Add Design section here-->
+
+<div class="row">
+  <div class="col">
+    <ng-container>
+      <div class="card card-project design-card mb-5" >
+        <div class="card-body text-center">
+            <h4 class="card-title text-start">Youtube Music UI</h4>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);"  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FfoZg9jmBDwkY4iQvK4Q53S%2FYoutube-Music" allowfullscreen></iframe>
+            <small *ngIf="screenWidth <= 500">View in Browser</small>
+          </div>
+    </div>
+    </ng-container>
+  </div>
+  <div class="col">
+    <ng-container>
+      <div class="card card-project design-card mb-5" >
+
+        <div class="card-body text-center">
+            <h4 class="card-title text-start">Neumorphic Dashboard </h4>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);"  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FfhPnYoz2NaBcS5QittLAHs%2FNeumorphic-Dashboard-UI" allowfullscreen></iframe>
+            <small *ngIf="screenWidth <= 500">View in Browser</small>
+          </div>
+    </div>
+    </ng-container>
+  </div>
+  <div class="col">
+    <ng-container>
+      <div class="card card-project design-card mb-5" >
+
+        <div class="card-body text-center">
+            <h4 class="card-title text-start">Proptech UI</h4>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);"  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9F2COdaYMWs45pgbm4dbdp%2FPropTech%3Fnode-id%3D0%253A1%26t%3DUVhNZaVo6g3WIEVQ-1" allowfullscreen></iframe>
+            <small *ngIf="screenWidth <= 500">View in Browser</small>
+          </div>
+    </div>
+    </ng-container>
+  </div>
+  <div class="col">
+    <ng-container>
+      <div class="card card-project design-card mb-5" >
+
+        <div class="card-body text-center">
+            <h4 class="card-title text-start">Gym Web-App UI/UX</h4>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);"  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYzvGbLRXu6MVJeTOAOTXqX%2FGym-app" allowfullscreen></iframe>
+            <small *ngIf="screenWidth <= 500">View in Browser</small>
+          </div>
+    </div>
+    </ng-container>
+  </div>
+  <div class="col">
+    <ng-container>
+      <div class="card card-project design-card mb-5" >
+
+        <div class="card-body text-center">
+            <h4 class="card-title text-start">Instagram UserProfile Page UI/UX</h4>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);"  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F1bY1XBSOafBJ4LvqtAvUVk%2FInstagram%3Fscaling%3Dscale-down%26page-id%3D0%253A1%26node-id%3D101%253A3" allowfullscreen></iframe>
+            <small *ngIf="screenWidth <= 500">View in Browser</small>
+          </div>
+    </div>
+    </ng-container>
+  </div>
+ <div class="col">
 <ng-container>
-  <div class="card card-project mb-5" >
-    <div class="card-body text-center">
-        <h4 class="card-title text-start">Youtube Music UI</h4>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FfoZg9jmBDwkY4iQvK4Q53S%2FYoutube-Music" allowfullscreen></iframe>
-
-      </div>
-</div>
-</ng-container>
-
-<ng-container>
-  <div class="card card-project mb-5" >
-
-    <div class="card-body text-center">
-        <h4 class="card-title text-start">Neumorphic Dashboard </h4>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FfhPnYoz2NaBcS5QittLAHs%2FNeumorphic-Dashboard-UI" allowfullscreen></iframe>
-
-      </div>
-</div>
-</ng-container>
-<ng-container>
-  <div class="card card-project mb-5" >
-
-    <div class="card-body text-center">
-        <h4 class="card-title text-start">Proptech UI</h4>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9F2COdaYMWs45pgbm4dbdp%2FPropTech%3Fnode-id%3D0%253A1%26t%3DUVhNZaVo6g3WIEVQ-1" allowfullscreen></iframe>
-      </div>
-</div>
-</ng-container>
-<ng-container>
-  <div class="card card-project mb-5" >
-
-    <div class="card-body text-center">
-        <h4 class="card-title text-start">Gym Web-App UI/UX</h4>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYzvGbLRXu6MVJeTOAOTXqX%2FGym-app" allowfullscreen></iframe>
-
-      </div>
-</div>
-</ng-container>
-<ng-container>
-  <div class="card card-project mb-5" >
-
-    <div class="card-body text-center">
-        <h4 class="card-title text-start">Instagram UserProfile Page UI/UX</h4>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F1bY1XBSOafBJ4LvqtAvUVk%2FInstagram%3Fscaling%3Dscale-down%26page-id%3D0%253A1%26node-id%3D101%253A3" allowfullscreen></iframe>
-
-      </div>
-</div>
-</ng-container>
-<ng-container>
-  <div class="card card-project mb-5" >
+  <div class="card card-project design-card mb-5" >
 
     <div class="card-body text-center">
         <h4 class="card-title text-start">Dance Studio UI/UX</h4>
-        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYpH7V5MaLwBXFYC8wIMWEq%2FDanceStudio%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
-
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);"  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYpH7V5MaLwBXFYC8wIMWEq%2FDanceStudio%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+        <small *ngIf="screenWidth < 500">View in Browser</small>
       </div>
 </div>
 </ng-container>
+ </div>
 </div>
+</div>
+
+
+

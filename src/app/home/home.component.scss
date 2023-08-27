@@ -37,3 +37,9 @@
         width: auto;
 }
 }
+
+@media (max-width:500px){
+  .card{
+    margin-top: 20px !important;
+  }
+}

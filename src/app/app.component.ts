@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import * as firebase from 'firebase/app';
 declare var require: any
 const FileSaver = require('file-saver');
@@ -9,6 +9,7 @@ const FileSaver = require('file-saver');
 })
 export class AppComponent {
   title = 'portfolio';
+  screenWidth!:number;
   constructor(){
 
   }
@@ -16,6 +17,11 @@ export class AppComponent {
     // firebase.default.analytics().logEvent('eventname', {
     //   'firsttimeuser' : true,
     // })
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+  this.screenWidth= window.innerWidth;
   }
   downloadPdf() {
     const pdfUrl = '../../assets/Inshal-Resume.pdf';

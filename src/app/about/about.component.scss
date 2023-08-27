@@ -68,9 +68,23 @@
   color: blue;
   text-decoration: underline;
 }
+
+
+
+@media (max-width:400px){
+  .card-about{
+    margin-top: 20px !important;
+  }
+}
 @media screen and (max-width:1300px) {
     .card{
         height: auto;
         width: auto;
 }
+.text{
+  height: 470px;
+  overflow: auto;
 }
+}
+
+

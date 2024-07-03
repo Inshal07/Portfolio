@@ -1,0 +1,36 @@
+.card{
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2em;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(168, 167, 238, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    height: 600px;
+    width: 1300px;
+    .card-title{
+        font-size: 40px;
+    }
+    .card-text{
+        font-size: 20px;
+        line-break: -12px;
+    }
+    .fab{
+        font-size: 25px;
+    }
+    .card-footer{
+        text-align: center;
+        border: none;
+        background: none;
+
+    }
+
+}
+
+
+@media screen and (max-width:1300px) {
+    .card{
+        height: auto;
+        width: auto;
+}
+}

@@ -1,0 +1,126 @@
+.card-main{
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2em;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(168, 167, 238, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    height: 600px;
+    width: 1300px;
+    .card-title{
+        font-size: 40px;
+    }
+   
+    .card-text{
+        padding-left: 5vw;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .title-text{
+        font-size: 20px;
+    }
+    .small{
+        font-size: 14px;
+        margin-top: -15px;
+    }
+    .card-footer{
+        text-align: center;
+        border: none;
+        background: none;
+        .btn-nav{
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    
+}
+//Scroll
+.content-1{
+    overflow-y: auto;
+    min-height: 400px;
+    max-height: 400px;
+  
+}
+.card-body{
+    padding: 10px;
+    margin: 10px;
+}
+
+.col-3{
+    margin-left: 80px;
+}
+.patho{
+    border-radius: 20px;
+}
+
+.card-project{
+    margin-top: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2em;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(168, 167, 238, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    height: 600px;
+    width: 1300px;
+   
+    .card-title{
+        font-size: 40px;
+    }
+    img{
+        border-radius:10px ;
+    }
+    .card-footer{
+        text-align: center;
+        border: none;
+        background: none;
+        
+    }
+    .proImage{
+        margin: 5px;
+        width: 600px;
+        height: 400px;
+        border-radius: 20px;
+    }
+    .desc{
+        margin: 30px auto;
+        padding: 10px;
+        font-size: 22px;
+        max-height: 300px;
+        overflow: auto;
+    }
+    .link-btn{
+        font-size: 20px;
+        font-weight: bolder;
+        margin: 10px;
+        background-color: rgb(0, 195, 255);
+        border-radius: 10px;
+    }
+    
+}
+
+.head{
+    margin-top: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2em;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(168, 167, 238, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    height: 80px;
+    width: 1300px;
+    .card-title{
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width:1300px) {
+    .card{
+        height: auto;
+        width: auto;
+    }
+    
+
+}

@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="card card-main">
+
+    <div class="card-body">
+        <h4 class="card-title">Project</h4>
+        <div class="container content-1">
+            <div class="row ">
+                <p class="card-text">Angular Projects</p>
+                @for(item of projectView; track item){
+                  <div class="col text-center" >
+                    <button class="btn btn-default" (click)="viewScroller(item.scroll)">
+                      <img class="patho" [ngSrc]="item.image" alt="" srcset="" width="250" height="150"><br>
+                      <p class="title-text">{{item.name}}</p>
+                      <p class="small">Click to view more about {{item.name}}</p>
+                 </button>
+                  </div>
+                }@empty {
+                  <p>No data for Projects</p>
+                } 
+            </div> 
+            <div class="row mt-3">
+                <p class="card-text">UI/UX Designs</p>
+                @for(item of designView; track item){
+                  <div class="col text-center" >
+                    <button class="btn btn-default" (click)="viewScroller(item.scroll)">
+                      <img class="patho" [ngSrc]="item.image" alt="" srcset="" width="250" height="150"><br>
+                      <p class="title-text">{{item.name}}</p>
+                      <p class="small">Click to view more about {{item.name}}</p>
+                 </button>
+                  </div>
+                }@empty {
+                  <p>No data for Design</p>
+                } 
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+
+   <app-nav-footer></app-nav-footer>
+    </div>
+</div>
+
+
+<ng-template [ngIf]="patho" *ngFor="let items of listProjects">
+  <div class="card card-project mb-5" >
+
+    <div class="card-body ">
+        <h4 class="card-title">{{items.Name}}</h4>
+        <div class="container">
+          <div class="row">
+            <div class="col" >
+              <img class="img-fluid proImage" [src]="items.image" alt="" >
+            </div>
+            <div class="col">
+              <div class="desc text-center">
+                {{items.desc}}
+              </div>
+            </div>
+          </div>
+
+           <!-- <img class="img-fluid proImage" [src]="items.imageBoard" alt=""  height="270px">
+           <img class="img-fluid proImage" [src]="items.imageEnd" alt="" height="270px"> -->
+        </div>
+
+        </div>
+
+    <div class="card-footer">
+      <div class="d-grid gap-2">
+        <a class="btn link-btn" href="{{items.link}}" target="blank" type="button">Link</a>
+      </div>
+    </div>
+</div>
+</ng-template>
+<div class="card head" >
+  <div class="card-body text-center">
+      <h4 class="card-title ">UI/UX Design</h4>
+    </div>
+</div>
+<ng-container>
+  <div class="card card-project mb-5" >
+
+    <div class="card-body text-center">
+        <h4 class="card-title text-start">Dance Studio UI/UX</h4>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYpH7V5MaLwBXFYC8wIMWEq%2FDanceStudio%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+
+      </div>
+</div>
+</ng-container>
+<ng-container>
+  <div class="card card-project mb-5" >
+
+    <div class="card-body text-center">
+        <h4 class="card-title text-start">Real Estate platform UI/UX</h4>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FvcYJB2S2qryygELPaWY3pF%2FEnvironSpace%3Fnode-id%3D0-1%26t%3DVmTQLMJZ4mVymbcV-1" allowfullscreen></iframe>
+      </div>
+</div>
+<ng-container>
+  <div class="card card-project mb-5" >
+
+    <div class="card-body text-center">
+        <h4 class="card-title text-start">Gym Web-App UI/UX</h4>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1250" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYzvGbLRXu6MVJeTOAOTXqX%2FGym-app" allowfullscreen></iframe>
+      </div>
+</div>
+</ng-container>
+ 
+ 

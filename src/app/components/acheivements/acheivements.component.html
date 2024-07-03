@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body ">
+            <h4 class="card-title">Achievements</h4>
+            <div class="container rowed">
+            <div class="row text-center">
+                <div class="col">
+                    <button class="btn btn-block select achieve" (click)="onAchieve()">
+                    <img class="img-fluid achieves" src="../../assets/achieve.svg" alt="achieve" >
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-block select event" (click)="onEvent()">
+                        <img class="img-fluid events" src="../../assets/Events.svg" alt="achieve" >
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <app-nav-footer></app-nav-footer>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="cards">
+        <div class="card-body ">
+            <h4 class="card-title">Achievements/Certificates</h4>
+        </div>
+    </div>
+    </div>
+<div class="container" id="test">
+    <ng-container *ngFor="let items of listCertificate">
+        <div class="card">
+        <div class="card-body ">
+            <div class="container">
+                <div class="row">
+                    <div class="col image">
+                        <img class="img-fluid set" [ngSrc]="items.url" alt="" width="542" height="240" priority>
+                    </div>
+                    <div class="col title">
+                        <p class="Course-Name">{{items.Name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </ng-container>
+
+</div>
+<div class="container">
+<div class="cards">
+    <div class="card-body ">
+        <h4 class="card-title">Events</h4>
+    </div>
+</div>
+</div>
+<div class="container">
+    <ng-container *ngFor="let items of listEvents">
+        <div class="card">
+        <div class="card-body ">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col title">
+                        <p class="Course-Name">{{items.Name}}</p>
+                    </div>
+                    <div class="col image">
+                        <img class="img-fluid set" [ngSrc]="items.url" alt="" width="542" height="240" priority>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </ng-container>
+
+</div>

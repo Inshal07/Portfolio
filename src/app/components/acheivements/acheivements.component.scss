@@ -1,0 +1,105 @@
+.card{
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2em;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(0, 68, 255, 0.034);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    height: 600px;
+    width: 1300px;
+  .card-title{
+    padding: 10px;
+    font-size: 40px;
+  }
+
+    //Logo animation
+    @keyframes floating {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 15px); }
+        100%   { transform: translate(0, -0px); }
+    }
+    .select{
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin: 20px;
+    border-width: 3px;
+    border-style: solid;
+    width:500px;
+    height: 200px;
+    font-size: 35px;
+    .events, .achieves{
+        width: auto;
+        height: 300px;
+    }
+    }
+
+    .card-footer{
+        text-align: center;
+        border: none;
+        background: none;
+
+    }
+}
+.row{
+    margin-top:35px;
+}
+.image{
+    text-align: center;
+    margin: 30px;
+    .set{
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+        max-height: 420px;
+    }
+}
+.Course-Name{
+    text-align: center;
+    margin-top: 200px;
+
+    font-size: 30px;
+    padding: 20px;
+}
+
+.cards{
+    text-align: center;
+    margin-top: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2em;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(168, 167, 238, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    height: 80px;
+  .card-title{
+      margin: 20px auto;
+      font-size: 30px;
+      font-weight: bold;
+  }
+}
+
+
+@media screen and (max-width:1300px) {
+    .card{
+        height: auto;
+        width: auto;
+    }
+    .select{
+        width: 80px;
+        height: 80px;
+    }
+    .Course-Name{
+        text-align: center;
+        margin-top: auto;
+        font-size: medium;
+    }
+    .image{
+        margin: auto;
+    }
+    .card-title{
+        font-size: small;
+    }
+
+}

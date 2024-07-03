@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body ">
+            <h4 class="card-title">Skills</h4>
+            <div class="row">
+                <div class="col-auto text-center mage">
+                    <img  ngSrc="../../assets/Group 4.png" width="500" height="200" priority alt="" >
+                </div>
+                <div class="col-6">
+                    <div class="progress" *ngFor="let items of listSKills">
+                        <div class="progress-bar " role="progressbar" [style.width]="items.value+'%'"
+                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <p class="card-text">{{items.Name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+
+            </div>
+        </div>
+        <div class="card-footer">
+           <app-nav-footer></app-nav-footer>
+        </div>
+    </div>
+</div>

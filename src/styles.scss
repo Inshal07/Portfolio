@@ -1,1 +1,30 @@
+
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap');
+
+body{
+  scroll-behavior: smooth;
+    height: 100%;
+    font-family: 'Assistant', sans-serif;
+    background: linear-gradient(90deg, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%);
+    background-image: url('./assets/Desktop.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+*
+::-webkit-scrollbar{
+  width: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+  *::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color:#20a2f5;
+    background: linear-gradient(85deg,#20a2f5,#ffffffbd);
+   border-bottom: .3px solid #20a2f5;
+  }
